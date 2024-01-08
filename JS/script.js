@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Array to store all guessed letters
   let guessedLetters = [];
   const userInput = document.querySelector(`#letter1`);
-  const resultDisplay = document.querySelector(`#result`);
   const incorrectGuessDisplay = document.querySelector(`#letterLog`);
   const hiddenWord = Array(chosenWordSplit.length).fill(`?`);
   const wordParagraph = document.querySelector(`#outputLines`);
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to check if the game is over.
   function isGameOver() {
-    if (incorrectGuesses.length > 6) {
+    if (incorrectGuesses.length > 5) {
       setTimeout(() => {
         alert(
           `Sorry, Game Over! The word you are looking for is: ${chosenWord}` +
